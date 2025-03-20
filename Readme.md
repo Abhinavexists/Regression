@@ -8,8 +8,8 @@ This project demonstrates different regression analysis techniques:
 - Simple Linear Regression (Height-Weight Analysis)
 - Multiple Linear Regression (Economic Index Analysis)
 - Polynomial Regression (Non-linear Data Modeling)
-- Ridge and Lasso Regression (Regularization Techniques)
-- Model Training and Optimization
+- Ridge and Lasso Regression (Regularization Techniques with Forest Fires Analysis)
+- Model Training and Optimization (Forest Fire Prediction)
 
 ## Project Structure
 
@@ -17,7 +17,9 @@ This project demonstrates different regression analysis techniques:
 .
 ├── Datasets/
 │   ├── Economic_Index.csv
-│   └── Height_Weight.csv
+│   ├── Height_Weight.csv
+│   ├── Algerian_forest_fires_dataset_UPDATE.csv
+│   └── Algerian_forest_fires_cleaned_dataset.csv
 ├── Notebooks/
 │   ├── Simple_Linear_Regression.ipynb
 │   ├── Multiple_Linear_Regession.ipynb
@@ -81,12 +83,15 @@ pip install -r requirements.txt
 - Handles multicollinearity in features
 - Demonstrates parameter tuning using cross-validation
 - Compares performance between Ridge and Lasso models
+- Uses Algerian Forest Fires dataset for real-world application
 
 ### Model Training
 - Advanced model training techniques
 - Hyperparameter optimization
 - Model validation and testing
 - Performance comparison across different regression techniques
+- Forest fire prediction using weather and environmental factors
+- Data preprocessing and feature engineering for real-world data
 
 ## Model Evaluation Metrics
 
@@ -120,3 +125,11 @@ Each notebook includes detailed visualizations:
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Datasets
+
+The project uses several datasets:
+- Height_Weight.csv: Basic dataset for simple linear regression
+- Economic_Index.csv: Economic indicators for multiple linear regression
+- Algerian_forest_fires_dataset_UPDATE.csv: Original forest fires dataset
+- Algerian_forest_fires_cleaned_dataset.csv: Preprocessed forest fires dataset for advanced regression techniques

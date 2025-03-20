@@ -1,6 +1,6 @@
 # Regression
 
-A comprehensive implementation of various regression techniques using Python, including Simple Linear Regression, Multiple Linear Regression, and Polynomial Regression for different datasets.
+A comprehensive implementation of various regression techniques using Python, including Simple Linear Regression, Multiple Linear Regression, Polynomial Regression, and advanced techniques like Ridge and Lasso Regression.
 
 ## Overview
 
@@ -8,6 +8,8 @@ This project demonstrates different regression analysis techniques:
 - Simple Linear Regression (Height-Weight Analysis)
 - Multiple Linear Regression (Economic Index Analysis)
 - Polynomial Regression (Non-linear Data Modeling)
+- Ridge and Lasso Regression (Regularization Techniques)
+- Model Training and Optimization
 
 ## Project Structure
 
@@ -17,9 +19,11 @@ This project demonstrates different regression analysis techniques:
 │   ├── Economic_Index.csv
 │   └── Height_Weight.csv
 ├── Notebooks/
-│   ├── Multiple_Linear_Regression.ipynb
+│   ├── Simple_Linear_Regression.ipynb
+│   ├── Multiple_Linear_Regession.ipynb
 │   ├── Polynomial_Regression.ipynb
-│   └── Simple_Linear_Regression.ipynb
+│   ├── Ridge_Lasso_Regression.ipynb
+│   └── Model Training.ipynb
 ├── .gitignore
 ├── LICENSE
 └── requirements.txt
@@ -46,12 +50,14 @@ pip install -r requirements.txt
 
 ## Dependencies
 
-- numpy
-- pandas
-- matplotlib
-- seaborn
-- scikit-learn
-- statsmodels
+- numpy (>= 1.21.0)
+- pandas (>= 1.3.0)
+- matplotlib (>= 3.4.0)
+- seaborn (>= 0.11.0)
+- scikit-learn (>= 1.0.0)
+- jupyter (>= 1.0.0)
+- ipykernel (>= 6.0.0)
+- statsmodels (>= 0.13.0)
 
 ## Usage
 
@@ -70,6 +76,18 @@ pip install -r requirements.txt
 - Implements polynomial feature transformation
 - Includes model comparison with different polynomial degrees
 
+### Ridge and Lasso Regression
+- Implements L1 and L2 regularization techniques
+- Handles multicollinearity in features
+- Demonstrates parameter tuning using cross-validation
+- Compares performance between Ridge and Lasso models
+
+### Model Training
+- Advanced model training techniques
+- Hyperparameter optimization
+- Model validation and testing
+- Performance comparison across different regression techniques
+
 ## Model Evaluation Metrics
 
 All implementations include various evaluation metrics:
@@ -78,6 +96,7 @@ All implementations include various evaluation metrics:
 - Root Mean Squared Error (RMSE)
 - R-squared Score
 - Adjusted R-squared Score
+- Cross-validation Scores
 
 ## Results Visualization
 
@@ -87,6 +106,8 @@ Each notebook includes detailed visualizations:
 - Regression lines
 - Residual plots
 - Pair plots
+- Regularization path plots
+- Learning curves
 
 ## Contributing
 

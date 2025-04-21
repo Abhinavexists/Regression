@@ -1,35 +1,23 @@
 # Regression
 
-A comprehensive implementation of various regression techniques using Python, including Simple Linear Regression, Multiple Linear Regression, Polynomial Regression, and advanced techniques like Ridge and Lasso Regression.
+A comprehensive implementation of various regression techniques using Python, including Simple Linear Regression, Multiple Linear Regression, Polynomial Regression, and advanced techniques like Ridge and Lasso Regression, as well as Logistic Regression for classification tasks. The project also includes a web application for deploying the models.
 
 ## Overview
 
-This project demonstrates different regression analysis techniques:
-- Simple Linear Regression (Height-Weight Analysis)
-- Multiple Linear Regression (Economic Index Analysis)
-- Polynomial Regression (Non-linear Data Modeling)
-- Ridge and Lasso Regression (Regularization Techniques with Forest Fires Analysis)
-- Model Training and Optimization (Forest Fire Prediction)
+This project demonstrates different regression and classification analysis techniques:
+- Linear Regression Techniques:
+  - Simple Linear Regression (Height-Weight Analysis)
+  - Multiple Linear Regression (Economic Index Analysis)
+  - Polynomial Regression (Non-linear Data Modeling)
+  - Ridge and Lasso Regression (Regularization Techniques with Forest Fires Analysis)
+  - Model Training and Optimization (Forest Fire Prediction)
+- Logistic Regression Classification:
+  - Binary Classification
+  - Multiclass Classification
+  - Handling Imbalanced Datasets
+  - ROC-AUC Evaluation
+- Web Application for Model Deployment
 
-## Project Structure
-
-```
-.
-├── Datasets/
-│   ├── Economic_Index.csv
-│   ├── Height_Weight.csv
-│   ├── Algerian_forest_fires_dataset_UPDATE.csv
-│   └── Algerian_forest_fires_cleaned_dataset.csv
-├── Notebooks/
-│   ├── Simple_Linear_Regression.ipynb
-│   ├── Multiple_Linear_Regession.ipynb
-│   ├── Polynomial_Regression.ipynb
-│   ├── Ridge_Lasso_Regression.ipynb
-│   └── Model Training.ipynb
-├── .gitignore
-├── LICENSE
-└── requirements.txt
-```
 
 ## Installation
 
@@ -60,6 +48,8 @@ pip install -r requirements.txt
 - jupyter (>= 1.0.0)
 - ipykernel (>= 6.0.0)
 - statsmodels (>= 0.13.0)
+- flask (for web application)
+- pickle (for model serialization)
 
 ## Usage
 
@@ -93,6 +83,58 @@ pip install -r requirements.txt
 - Forest fire prediction using weather and environmental factors
 - Data preprocessing and feature engineering for real-world data
 
+### Logistic Regression
+- Binary classification implementation
+- Multiclass classification techniques
+- Strategies for handling imbalanced datasets
+- ROC curve analysis and AUC score evaluation
+- Threshold optimization
+- Probability calibration
+
+### Web Application
+- Flask-based web interface for model predictions
+- User-friendly input form for forest fire prediction
+- Deployment-ready configuration for AWS Elastic Beanstalk
+- Saved models for quick inference
+
+## Running the Web Application
+
+1. Make sure all dependencies are installed:
+```bash
+pip install flask
+```
+
+2. Run the application locally:
+```bash
+python application.py
+```
+
+3. Access the application in your browser at `http://localhost:8080`
+
+## Deployment
+
+The project includes configuration for deployment to AWS Elastic Beanstalk:
+
+1. Install the EB CLI:
+```bash
+pip install awsebcli
+```
+
+2. Initialize your EB application:
+```bash
+eb init -p python-3.8 regression-app
+```
+
+3. Create an environment and deploy:
+```bash
+eb create regression-env
+```
+
+4. Open the deployed application:
+```bash
+eb open
+```
+
 ## Model Evaluation Metrics
 
 All implementations include various evaluation metrics:
@@ -108,11 +150,20 @@ All implementations include various evaluation metrics:
 Each notebook includes detailed visualizations:
 - Scatter plots
 - Correlation matrices
-- Regression lines
+- Regression lines and decision boundaries
 - Residual plots
 - Pair plots
 - Regularization path plots
 - Learning curves
+- ROC curves and confusion matrices
+
+## Datasets
+
+The project uses several datasets:
+- Height_Weight.csv: Basic dataset for simple linear regression
+- Economic_Index.csv: Economic indicators for multiple linear regression
+- Algerian_forest_fires_dataset_UPDATE.csv: Original forest fires dataset
+- Algerian_forest_fires_cleaned_dataset.csv: Preprocessed forest fires dataset for advanced regression techniques
 
 ## Contributing
 
@@ -125,11 +176,3 @@ Each notebook includes detailed visualizations:
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Datasets
-
-The project uses several datasets:
-- Height_Weight.csv: Basic dataset for simple linear regression
-- Economic_Index.csv: Economic indicators for multiple linear regression
-- Algerian_forest_fires_dataset_UPDATE.csv: Original forest fires dataset
-- Algerian_forest_fires_cleaned_dataset.csv: Preprocessed forest fires dataset for advanced regression techniques
